@@ -1,0 +1,8 @@
+virtualenv
+flask
+requests
+accelerate
+pillow
+io
+bytesio
+huggingface

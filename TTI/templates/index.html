@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel ="favicon-16x16" type="x-icon" href="favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+  body {
+    background-image: url('static/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+    <h1 class="neonText">AI Image Generation </h1>
+    <form action="/generate" method="post">
+        <label for="text_input">😎 Create an image using from text prompt 😎</label>
+        <input type="text" id="text_input" placeholder="Enter prompt" name="text_input" required>
+        <button class="button-85" role="button">Generate</button>
+    </form>
+    {% if image_base64 %}
+        <img  id="image" src="data:image/png;base64,{{ image_base64 }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
