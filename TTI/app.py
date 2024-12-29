@@ -6,8 +6,8 @@ import base64
 
 app = Flask(__name__)
 
-API_URL = "https://api-inference.huggingface.co/models/Melonie/text_to_image_finetuned"
-HEADERS = {"Authorization": "Bearer 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"}
+API_URL = "link to your api"
+HEADERS = {"Authorization": "Bearer Yout api key"}
 
 @app.route('/')
 def index():
